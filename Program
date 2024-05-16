@@ -1,0 +1,37 @@
+using System;
+
+namespace CalculadoraRectangulo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Captura de la base y la altura
+            Console.Write("Ingresa la base del rectángulo: ");
+            double baseRectangulo = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Ingresa la altura del rectángulo: ");
+            double alturaRectangulo = Convert.ToDouble(Console.ReadLine());
+
+            // Cálculo del área y perímetro
+            double area = CalcularArea(baseRectangulo, alturaRectangulo);
+            double perimetro = CalcularPerimetro(baseRectangulo, alturaRectangulo);
+
+            // Impresión de resultados
+            Console.WriteLine($"Área del rectángulo: {area}");
+            Console.WriteLine($"Perímetro del rectángulo: {perimetro}");
+        }
+
+        // Función para calcular el área
+        static double CalcularArea(double baseRectangulo, double alturaRectangulo)
+        {
+            return baseRectangulo * alturaRectangulo;
+        }
+
+        // Función para calcular el perímetro
+        static double CalcularPerimetro(double baseRectangulo, double alturaRectangulo)
+        {
+            return 2 * (baseRectangulo + alturaRectangulo);
+        }
+    }
+}
